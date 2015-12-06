@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/tvTitle"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/tvDetail"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingBottom="10dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:id="@+id/btnSave"
+        android:paddingLeft="10dp"
+        android:paddingStart="10dp"
+        android:paddingBottom="10dp"
+        />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:padding="10sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/color_label"
+            android:id="@+id/colorLabel" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:useDefaultMargins="true"
+            android:columnCount="8"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/colorLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/gridLayout">
+
+            <!--
+            Color scheme taken from:
+            https://color.adobe.com/Honey-Pot-color-theme-1490158/?showPublished=true
+            -->
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn1"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="#105B63"
+                />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/btn2"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:background="#FFFAD5"
+                />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn3"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:background="#FFD34E"
+                />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn4"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:background="#BD4932"
+                />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/task_detail_due_date"
+            android:id="@+id/dueLabel"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="40dp"
+            android:layout_below="@+id/gridLayout" />
+
+        <DatePicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/dueLabel" />
+
+    </RelativeLayout>
+</LinearLayout>
